@@ -50,8 +50,9 @@
   padding: 10px 22px 10px 20px;
   border: solid #5ca1cc 1px;
   text-decoration: none;
-    outline: none;
+   border: none;
 }
+
 
 .btn:hover {
   background: #60707a;
@@ -61,9 +62,12 @@
   background-image: -o-linear-gradient(top, #60707a, #3498db);
   background-image: linear-gradient(to bottom, #60707a, #3498db);
   text-decoration: none;
+    outline: none;
+
 }
 .btn:focus {
   outline: none;
+    outline: 0 !important;
 }
 
 .btn:checked + .btn{background:#fff;}
