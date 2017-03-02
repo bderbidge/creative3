@@ -29,18 +29,19 @@ var myApp = angular.module('myApp', []);
     $scope.numbers = [];
     $scope.operations = [];
     $scope.txt = '';
+    $scope.currentDisplay = currentDisplay;
 };
 
 $scope.addNumber = function(num) {
     $scope.txt += num; 
     $scope.numbers.push(parseInt(num));
-    $scope.currentDisplay += num;
+    currentDisplay += num;
 };
 
 $scope.addOperator = function(operator){
    $scope.txt += operator;
    $scope.operators.push(operator);
-   $scope.currentDisplay += operator;
+   currentDisplay += operator;
 };
 
  function calc(lhs,rhs,op){

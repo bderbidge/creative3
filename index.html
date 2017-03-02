@@ -11,7 +11,7 @@
    
 </head>
 <body>
-  <div ng-app='app' ng-controller='mainCtrl'>
+  <div ng-app='myApp' ng-controller='mainCtrl'>
 
 
       <div class="calc container text-center " >
@@ -19,7 +19,7 @@
       <small style="color:white"> Calculator</small>
     </div>
         <form name='calculatorForm'>
-            <div id="output" type="text"> {{ currentDisplay }}</div>   
+            <div id="ininput" type="text"> {{ currentDisplay }}</div>   
         </form>
       <input type ="button" value="AC" name ="no" class ="btn" ng-click="numbers = []; operators=[]; txt=0;">
       <input type ="button" value="CE" name ="no" class ="btn">
