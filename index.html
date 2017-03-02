@@ -21,7 +21,7 @@
         <form name='calculatorForm'>
         <input id="ininput" type="text" readonly>   
         </form>
-      <input type ="button" value="AC" name ="no" class ="btn">
+      <input type ="button" value="AC" name ="no" class ="btn" ng-click="numbers = []; operators=[]; txt=0;">
       <input type ="button" value="CE" name ="no" class ="btn">
       <input type ="button" value="%" name ="no" class ="btn" ng-click="addOperator('%')">
       <input type ="button" value="&divide;" name ="no" class ="btn" ng-click="addOperator('/')">
@@ -44,7 +44,7 @@
       <br>
       <input type ="button" value="0" name ="no"  class ="btn" ng-click="addNumber('0')">
       <input type ="button" value="." name ="no" class ="btn" ng-click="addNumber('.')">
-      <input type ="button" value="=" name ="no"  id="equal" class ="btn">
+      <input type ="button" value="=" name ="no"  id="equal" class ="btn" ng-click="calculate()">
           </div>
     </div>
       </div>
