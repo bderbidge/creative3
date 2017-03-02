@@ -29,7 +29,7 @@ var myApp = angular.module('myApp', []);
     $scope.numbers = [];
     $scope.operations = [];
     $scope.txt = '';
-    $scope.currentDisplay = currentDisplay;
+    $scope.currentDisplay = answer;
 };
 
 $scope.addNumber = function(num) {
