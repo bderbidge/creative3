@@ -2,10 +2,10 @@ var myApp = angular.module('myApp', []);
 
  myApp.controller('mainCtrl', function ($scope){   
 
- $scope.txt = '';
+ $scope.txt = "";
  $scope.numbers = [];
  $scope.operators = [];
- $scope.currentDisplay = '';
+ $scope.currentDisplay = "";
  $scope.count = 0;     
 
  $scope.calculate = function () {
@@ -30,8 +30,8 @@ var myApp = angular.module('myApp', []);
 
    
     $scope.numbers = [];
-    $scope.operations = [];
-    $scope.txt = '';
+    $scope.operators = [];
+    $scope.txt = "";
     $scope.currentDisplay = answer;
      $scope.count = 0;
     
@@ -42,21 +42,34 @@ $scope.addNumber = function(num) {
         $scope.currentDisplay = "";
     }
     $scope.txt += num; 
-     $scope.count += 1;
+    $scope.count += 1;
     $scope.currentDisplay += num;
     
    
 };
 
 $scope.addOperator = function(operator){
-   $scope.numbers.push(parseInt($scope.txt));
-   $scope.txt += operator;
-   $scope.operators.push(operator);
-   $scope.currentDisplay += operator;
+    $scope.numbers.push(parseInt($scope.txt));
+    $scope.txt += operator;
+    $scope.operators.push(operator);
+    $scope.currentDisplay += operator;
     $scope.txt = "";
+};
+     
+$scope.clear = function() {
+    $scope.txt = "";
+    $scope.numbers = [];
+    $scope.operators = [];
+    $scope.count = 0;
+    $scope.currentDisplay = "";
+    
 };
 
  function calc(lhs,rhs,op){
+     if (rhs === 0 && op === '/') {
+         $scope.currentDisplay = "Err divide by zero.";
+         return;
+     }
   switch(op){
     case '+':
       return lhs + rhs;

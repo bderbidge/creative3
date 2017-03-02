@@ -16,13 +16,12 @@
 
       <div class="calc container text-center " >
          <div class="row">
-      <small style="color:white"> Calculator</small>
-    </div>
-        <form name='calculatorForm' >
-            <div id="ininput" type="text" style="color:black; background-color:white; width:253px;"> {{ currentDisplay }}</div>   
+         </div>
+        <form name='calculatorForm'>
+            <div id="ininput" type="text"> {{ currentDisplay }}</div>   
         </form>
-      <input type ="button" value="AC" name ="no" class ="btn" ng-click="numbers = []; operators=[]; txt=0;">
-      <input type ="button" value="CE" name ="no" class ="btn">
+      <input type ="button" value="AC" name ="no" class ="btn" id = "AC" ng-click="clear()">
+      <input type ="button" value="CE" name ="no" class ="btn" ng-click="clear()">
       <input type ="button" value="%" name ="no" class ="btn" ng-click="addOperator('%')">
       <input type ="button" value="&divide;" name ="no" class ="btn" ng-click="addOperator('/')">
       <br>
