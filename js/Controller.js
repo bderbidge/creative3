@@ -2,10 +2,10 @@ var myApp = angular.module('myApp', []);
 
  myApp.controller('mainCtrl',function ($scope) {  
 
-
  $scope.txt = '';
  $scope.numbers = [];
  $scope.operators = [];
+ $scope.currentDisplay = '';
 
  $scope.calculate = function() {
     var answer = 0;
@@ -31,15 +31,17 @@ var myApp = angular.module('myApp', []);
     $scope.txt = '';
 };
 
-$scope.addNumber = function(num) { 
+$scope.addNumber = function(num) {
     $scope.txt += num; 
     $scope.numbers.push(parseInt(num));
+    $scope.currentDisplay += num;
 };
 
 $scope.addOperator = function(operator){
    $scope.txt += operator;
    $scope.operators.push(operator);
-}
+   $scope.currentDisplay += operator;
+};
 
  function calc(lhs,rhs,op){
   switch(op){

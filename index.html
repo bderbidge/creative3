@@ -19,7 +19,7 @@
       <small style="color:white"> Calculator</small>
     </div>
         <form name='calculatorForm'>
-        <input id="ininput" type="text" readonly>   
+            <div id="output" type="text"> {{ currentDisplay }}</div>   
         </form>
       <input type ="button" value="AC" name ="no" class ="btn" ng-click="numbers = []; operators=[]; txt=0;">
       <input type ="button" value="CE" name ="no" class ="btn">
