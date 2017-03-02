@@ -25,14 +25,17 @@ var myApp = angular.module('myApp', []);
 
     }
 
-    $scope.result = answer;
     $scope.numbers = [];
     $scope.operations = [];
     $scope.txt = '';
     $scope.currentDisplay = answer;
+    
 };
 
 $scope.addNumber = function(num) {
+    if($scope.numbers.length == 0){
+        $scope.currentDisplay = "";
+    }
     $scope.txt += num; 
     $scope.numbers.push(parseInt(num));
     $scope.currentDisplay += num;
