@@ -1,13 +1,13 @@
 var myApp = angular.module('myApp', []);
 
- myApp.controller('mainCtrl',function ($scope) {  
+ myApp.controller('mainCtrl', function ($scope){   
 
  $scope.txt = '';
  $scope.numbers = [];
  $scope.operators = [];
  $scope.currentDisplay = '';
 
- $scope.calculate = function() {
+ $scope.calculate = function () {
     var answer = 0;
 
     while($scope.operators.length > 0) {
@@ -16,7 +16,7 @@ var myApp = angular.module('myApp', []);
         right = 0;
       }
       var left = $scope.numbers.pop();
-      if(isNaN(left)){
+      if (isNaN(left)){
         left = 0;
       }
       var op = $scope.operators.pop();
@@ -35,13 +35,13 @@ var myApp = angular.module('myApp', []);
 $scope.addNumber = function(num) {
     $scope.txt += num; 
     $scope.numbers.push(parseInt(num));
-    currentDisplay += num;
+    $scope.currentDisplay += num;
 };
 
 $scope.addOperator = function(operator){
    $scope.txt += operator;
    $scope.operators.push(operator);
-   currentDisplay += operator;
+   $scope.currentDisplay += operator;
 };
 
  function calc(lhs,rhs,op){
