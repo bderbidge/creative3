@@ -33,7 +33,7 @@ var myApp = angular.module('myApp', []);
     $scope.operators = [];
     $scope.txt = "";
     $scope.currentDisplay = answer;
-     $scope.count = 0;
+    $scope.count = 0;
     
 };
 
@@ -52,7 +52,7 @@ $scope.addOperator = function(operator){
     $scope.numbers.push(parseInt($scope.txt));
     $scope.txt += operator;
     $scope.operators.push(operator);
-    $scope.currentDisplay += operator;
+    $scope.currentDisplay += " " + operator + " ";
     $scope.txt = "";
 };
      
