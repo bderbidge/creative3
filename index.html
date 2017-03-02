@@ -23,27 +23,27 @@
         </form>
       <input type ="button" value="AC" name ="no" class ="btn">
       <input type ="button" value="CE" name ="no" class ="btn">
-      <input type ="button" value="%" name ="no" class ="btn">
-      <input type ="button" value="&divide;" name ="no" class ="btn">
+      <input type ="button" value="%" name ="no" class ="btn" ng-click="addOperator('%')">
+      <input type ="button" value="&divide;" name ="no" class ="btn" ng-click="addOperator('/')">
       <br>
-      <input type ="button" value="1" name ="no" class ="btn">
-      <input type ="button" value="2" name ="no" class = "btn">
-      <input type ="button" value="3" name ="no" class ="btn">
-      <input type ="button" value="&times" name ="no"  class ="btn">
+      <input type ="button" value="1" name ="no" class ="btn" ng-click="addNumber('1')">
+      <input type ="button" value="2" name ="no" class = "btn" ng-click="addNumber('2')">
+      <input type ="button" value="3" name ="no" class ="btn" ng-click="addNumber('3')">
+      <input type ="button" value="&times" name ="no"  class ="btn" ng-click="addOperator('*')">
       <br>
-      <input type ="button" value="4" name ="no"  class ="btn">
-      <input type ="button" value="5" name ="no"  class ="btn">
-      <input type ="button" value="6" name ="no"  class ="btn">
-      <input type ="button" value="-" name ="no"  class ="btn">
+      <input type ="button" value="4" name ="no"  class ="btn" ng-click="addNumber('4')">
+      <input type ="button" value="5" name ="no"  class ="btn" ng-click="addNumber('5')">
+      <input type ="button" value="6" name ="no"  class ="btn" ng-click="addNumber('6')">
+      <input type ="button" value="-" name ="no"  class ="btn" ng-click="addOperator('-')">
       
       <br>
-      <input type ="button" value="7" name ="no"  class ="btn">
-      <input type ="button" value="8" name ="no"  class ="btn">
-      <input type ="button" value="9" name ="no"  class ="btn">
-      <input type ="button" value="+" name ="no" class ="btn">
+      <input type ="button" value="7" name ="no"  class ="btn" ng-click="addNumber('7')">
+      <input type ="button" value="8" name ="no"  class ="btn" ng-click="addNumber('8')">
+      <input type ="button" value="9" name ="no"  class ="btn" ng-click="addNumber('9')">
+      <input type ="button" value="+" name ="no" class ="btn" ng-click="addOperator('+')">
       <br>
-      <input type ="button" value="0" name ="no"  class ="btn">
-      <input type ="button" value="." name ="no" class ="btn">
+      <input type ="button" value="0" name ="no"  class ="btn" ng-click="addNumber('0')">
+      <input type ="button" value="." name ="no" class ="btn" ng-click="addNumber('.')">
       <input type ="button" value="=" name ="no"  id="equal" class ="btn">
           </div>
     </div>
