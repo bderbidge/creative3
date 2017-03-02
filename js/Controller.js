@@ -6,10 +6,13 @@ var myApp = angular.module('myApp', []);
  $scope.numbers = [];
  $scope.operators = [];
  $scope.currentDisplay = '';
+ $scope.count = 0;     
 
  $scope.calculate = function () {
     var answer = 0;
 
+    $scope.numbers.push(parseInt($scope.txt));
+     
     while($scope.operators.length > 0) {
       var right = $scope.numbers.pop();
       if(isNaN(right)){
@@ -25,26 +28,32 @@ var myApp = angular.module('myApp', []);
 
     }
 
+   
     $scope.numbers = [];
     $scope.operations = [];
     $scope.txt = '';
     $scope.currentDisplay = answer;
+     $scope.count = 0;
     
 };
 
 $scope.addNumber = function(num) {
-    if($scope.numbers.length == 0){
+    if($scope.count == 0){
         $scope.currentDisplay = "";
     }
     $scope.txt += num; 
-    $scope.numbers.push(parseInt(num));
+     $scope.count += 1;
     $scope.currentDisplay += num;
+    
+   
 };
 
 $scope.addOperator = function(operator){
+   $scope.numbers.push(parseInt($scope.txt));
    $scope.txt += operator;
    $scope.operators.push(operator);
    $scope.currentDisplay += operator;
+    $scope.txt = "";
 };
 
  function calc(lhs,rhs,op){
